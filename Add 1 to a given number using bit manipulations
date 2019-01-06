@@ -1,0 +1,22 @@
+#include<iostream>
+#include <bitset>
+using namespace std;
+
+
+int main(){
+
+int number ;
+cin>>number;
+int counter=0;
+while(number&(1<<counter)){
+number= number^(1<<counter);
+counter++;
+
+}
+
+number|=(1<<counter);
+
+cout<<number<<endl;
+
+return 0;
+}
